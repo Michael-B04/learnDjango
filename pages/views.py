@@ -5,4 +5,8 @@ def home_page_view(request):
     return HttpResponse("Homepage")
 
 def about_page_view(request):
-    return render(request,"pages/about.html")
+    context = {
+        "name":"Max",
+        "age": 2
+    }
+    return render(request,"pages/about.html",context)
